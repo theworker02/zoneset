@@ -1,13 +1,35 @@
 # Changelog
 
+All notable changes to `zoneset` are documented in this file.
+
+The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
+
 ## [1.0.0] — 2026-09-28
 
-### Added
-- First stable release of `zoneset` (`number` toolkit)
-- Zone numeric set values, ranges, and human-readable units.
-- Official logo at `docs/logo.svg`
-- Library + CLI + `node:test` smoke suite
-- GitHub Pages documentation under `docs/`
-- Diligence docs: ACQUISITION, CONTRIBUTING, SUPPORT, SECURITY
+### Added — stable public release
+
+- First **stable** release of `zoneset` as a `number` toolkit.
+- Product statement: Zone numeric set values, ranges, and human-readable units.
+- Library entrypoint `src/index.js` with `run(argv)` and category helpers.
+- CLI entrypoint `src/cli.js` for shell and CI usage.
+- Automated smoke tests via `node:test` (`src/index.test.js`).
+- Official brand mark at `docs/logo.svg` (unique accent derived per product).
+- GitHub Pages documentation site under `docs/` (`index.html`, `styles.css`, `.nojekyll`).
+- Diligence pack: `ACQUISITION.md`, `CONTRIBUTING.md`, `SUPPORT.md`, `SECURITY.md`, `NOTICE`.
+- Repository homepage pointed at `https://theworker02.github.io/zoneset/`.
+- Funding metadata in `.github/FUNDING.yml`.
+
+### Notes for integrators
+
+- Runtime: Node.js **18+**
+- Dependencies: **none** at runtime
+- License: **MIT**
+- Breaking-change policy: minor/patch releases will not remove `run(argv)` without a major bump.
+
+### Verification performed for this release
+
+- `node --test` smoke path expected to pass on a clean clone.
+- CLI invoked with default argv produces non-empty stdout for the sample path.
+- Pages artifact paths present under `docs/`.
 
 [1.0.0]: https://github.com/theworker02/zoneset/releases/tag/v1.0.0
